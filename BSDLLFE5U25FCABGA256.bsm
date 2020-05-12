@@ -1,0 +1,1161 @@
+-- ********************************************************************
+-- * LFE5U_25F BSDL Model                                              *
+-- *                                                                  *
+-- *           This is a preliminary BSDL file.                       *
+-- *         It has not been verified on silicon.                     *
+-- *                                                                  *
+-- * File Version:      1.13                                          *
+-- * File Date:          6/21/2018                                    *
+-- *                                                                  *
+-- * Standard Test Access Port and Boundary-Scan Architecture         *
+-- * VHDL Description File                                            *
+-- *                                                                  *
+-- * This BSDL file is created by genBSDL V3.8 according to:          *
+-- * - IEEE Standard 1149.1-2001                                      *
+-- *                                                                  *
+-- * Generated with:                                                  *
+-- * - BSR Rev:  1.8                                                 *
+-- * - OPCODE Rev:  1.1                                               *
+-- *                                                                  *
+-- * This BSDL has been validated for syntax and semantics            *
+-- * compliance to IEEE 1149.1 using:                                 *
+-- * - Lattice BSDL Syntax Checker                                    *
+-- * - Goepel BSDL Syntax Checker V3.1.2                              *
+-- * - ASSET/Agilent BSDL Validation Service                          *
+-- * - Keysight BSDL Syntax Checker                                   *
+-- *                                                                  *
+-- *  Copyright 2013 - 2018                                           *
+-- *  Lattice Semiconductor Corporation                               *
+-- *  5555 NE Moore Ct.                                               *
+-- *  Hillsboro, OR 97124                                             *
+-- *                                                                  *
+-- *  All rights reserved.  No part of this program or publication    *
+-- *  may be reproduced, transmitted, transcribed, stored in a        *
+-- *  retrieval system, or translated into any language or            *
+-- *  computer language, in any form or by any means without this     *
+-- *  notice appearing within.                                        *
+-- ********************************************************************
+-- *                                                                  *
+-- *                           IMPORTANT                              *
+-- *                                                                  *
+-- * The following is a BSDL file that tests all of the I/O pins      *
+-- * as bi-directional pins. The functionality of the BSCAN register  *
+-- * for this device is dependent of the pattern programmed into the  *
+-- * device. If the device is configured to use LVDS pairs or VREF    *
+-- * signals, an application specific BSDL file is required.          *
+-- * If any IOs are configured as output only, the device needs to be *
+-- * erased and re-programmed to bi-directional pin or use power      *
+-- * cycle to reset to default state. Otherwise, an application-      *
+-- * specific BSDL file is required.                                  *
+-- *                                                                  *
+-- * For Further assistance, please contact Tech Support at           *
+-- *       1-800-LATTICE or techsupport@latticesemi.com               *
+-- ********************************************************************
+-- *                                                                  *
+-- *                          REVISION HISTORY                        *
+-- * Rev 1.13:  6/21/2018                                             *
+-- *  - Draft version.                                          *
+-- *                                                                  *
+-- ********************************************************************
+entity LFE5U_25F_XXBG256 is
+
+	generic (PHYSICAL_PIN_MAP : string := "cabga256");
+		port (
+	                PL2A  :  inout bit;
+	                PL2B  :  inout bit;
+	                PL2C  :  inout bit;
+	                PL2D  :  inout bit;
+	                PL5A  :  inout bit;
+	                PL5C  :  inout bit;
+	                PL5B  :  inout bit;
+	                PL5D  :  inout bit;
+	                PL8A  :  inout bit;
+	                PL8C  :  inout bit;
+	                PL8B  :  inout bit;
+	                PL8D  :  inout bit;
+	               PL11A  :  inout bit;
+	               PL11C  :  inout bit;
+	               PL11B  :  inout bit;
+	               PL11D  :  inout bit;
+	               PL14A  :  inout bit;
+	               PL14C  :  inout bit;
+	               PL14B  :  inout bit;
+	               PL14D  :  inout bit;
+	               PL17A  :  inout bit;
+	               PL17C  :  inout bit;
+	               PL17B  :  inout bit;
+	               PL17D  :  inout bit;
+	               PL20A  :  inout bit;
+	               PL20C  :  inout bit;
+	               PL20B  :  inout bit;
+	               PL20D  :  inout bit;
+	               PL23A  :  inout bit;
+	               PL23C  :  inout bit;
+	               PL23B  :  inout bit;
+	               PL23D  :  inout bit;
+	               PL26A  :  inout bit;
+	               PL26C  :  inout bit;
+	               PL26B  :  inout bit;
+	               PL26D  :  inout bit;
+	               PL29A  :  inout bit;
+	               PL29C  :  inout bit;
+	               PL29B  :  inout bit;
+	               PL29D  :  inout bit;
+	               PL32A  :  inout bit;
+	               PL32C  :  inout bit;
+	               PL32B  :  inout bit;
+	               PL32D  :  inout bit;
+	               PL35A  :  inout bit;
+	               PL35C  :  inout bit;
+	               PL35B  :  inout bit;
+	               PL35D  :  inout bit;
+	               PL38A  :  inout bit;
+	               PL38C  :  inout bit;
+	               PL38B  :  inout bit;
+	               PL38D  :  inout bit;
+	               PL41A  :  inout bit;
+	               PL41C  :  inout bit;
+	               PL41B  :  inout bit;
+	               PL41D  :  inout bit;
+	               PL44A  :  inout bit;
+	               PL44C  :  inout bit;
+	               PL44B  :  inout bit;
+	               PL44D  :  inout bit;
+	               PL47A  :  inout bit;
+	               PL47B  :  inout bit;
+	               PL47C  :  inout bit;
+	               PL47D  :  inout bit;
+	                PB4A  :  inout bit;
+	                PB6A  :  inout bit;
+	                PB4B  :  inout bit;
+	                PB6B  :  inout bit;
+	                PB9A  :  inout bit;
+	               PB11A  :  inout bit;
+	                PB9B  :  inout bit;
+	               PB11B  :  inout bit;
+	               PB13A  :  inout bit;
+	               PB15A  :  inout bit;
+	               PB13B  :  inout bit;
+	               PB15B  :  inout bit;
+	               PB18A  :  inout bit;
+	               INITN  :  inout bit;
+	                CCLK  :  inout bit;
+	            PROGRAMN  :  in bit;
+	                DONE  :  inout bit;
+	               CFG_1  :  in bit;
+	               CFG_2  :  in bit;
+	               CFG_0  :  in bit;
+	                 TDO  :  out bit;
+	                 TCK  :  in bit;
+	                 TDI  :  in bit;
+	                 TMS  :  in bit;
+	               PR47D  :  inout bit;
+	               PR47C  :  inout bit;
+	               PR47B  :  inout bit;
+	               PR47A  :  inout bit;
+	               PR44D  :  inout bit;
+	               PR44B  :  inout bit;
+	               PR44C  :  inout bit;
+	               PR44A  :  inout bit;
+	               PR41D  :  inout bit;
+	               PR41B  :  inout bit;
+	               PR41C  :  inout bit;
+	               PR41A  :  inout bit;
+	               PR38D  :  inout bit;
+	               PR38B  :  inout bit;
+	               PR38C  :  inout bit;
+	               PR38A  :  inout bit;
+	               PR35D  :  inout bit;
+	               PR35B  :  inout bit;
+	               PR35C  :  inout bit;
+	               PR35A  :  inout bit;
+	               PR32D  :  inout bit;
+	               PR32B  :  inout bit;
+	               PR32C  :  inout bit;
+	               PR32A  :  inout bit;
+	               PR29D  :  inout bit;
+	               PR29B  :  inout bit;
+	               PR29C  :  inout bit;
+	               PR29A  :  inout bit;
+	               PR26D  :  inout bit;
+	               PR26B  :  inout bit;
+	               PR26C  :  inout bit;
+	               PR26A  :  inout bit;
+	               PR23D  :  inout bit;
+	               PR23B  :  inout bit;
+	               PR23C  :  inout bit;
+	               PR23A  :  inout bit;
+	               PR20D  :  inout bit;
+	               PR20B  :  inout bit;
+	               PR20C  :  inout bit;
+	               PR20A  :  inout bit;
+	               PR17D  :  inout bit;
+	               PR17B  :  inout bit;
+	               PR17C  :  inout bit;
+	               PR17A  :  inout bit;
+	               PR14D  :  inout bit;
+	               PR14B  :  inout bit;
+	               PR14C  :  inout bit;
+	               PR14A  :  inout bit;
+	               PR11D  :  inout bit;
+	               PR11B  :  inout bit;
+	               PR11C  :  inout bit;
+	               PR11A  :  inout bit;
+	                PR8D  :  inout bit;
+	                PR8B  :  inout bit;
+	                PR8C  :  inout bit;
+	                PR8A  :  inout bit;
+	                PR5D  :  inout bit;
+	                PR5B  :  inout bit;
+	                PR5C  :  inout bit;
+	                PR5A  :  inout bit;
+	                PR2D  :  inout bit;
+	                PR2C  :  inout bit;
+	                PR2B  :  inout bit;
+	                PR2A  :  inout bit;
+	               PT67B  :  inout bit;
+	               PT65B  :  inout bit;
+	               PT67A  :  inout bit;
+	               PT65A  :  inout bit;
+	               PT62B  :  inout bit;
+	               PT60B  :  inout bit;
+	               PT62A  :  inout bit;
+	               PT60A  :  inout bit;
+	               PT58B  :  inout bit;
+	               PT56B  :  inout bit;
+	               PT58A  :  inout bit;
+	               PT56A  :  inout bit;
+	               PT53B  :  inout bit;
+	               PT51B  :  inout bit;
+	               PT53A  :  inout bit;
+	               PT51A  :  inout bit;
+	               PT49B  :  inout bit;
+	               PT47B  :  inout bit;
+	               PT49A  :  inout bit;
+	               PT47A  :  inout bit;
+	               PT44B  :  inout bit;
+	               PT42B  :  inout bit;
+	               PT44A  :  inout bit;
+	               PT42A  :  inout bit;
+	               PT40B  :  inout bit;
+	               PT38B  :  inout bit;
+	               PT40A  :  inout bit;
+	               PT38A  :  inout bit;
+	               PT35B  :  inout bit;
+	               PT33B  :  inout bit;
+	               PT35A  :  inout bit;
+	               PT33A  :  inout bit;
+	               PT29B  :  inout bit;
+	               PT27B  :  inout bit;
+	               PT29A  :  inout bit;
+	               PT27A  :  inout bit;
+	               PT24B  :  inout bit;
+	               PT22B  :  inout bit;
+	               PT24A  :  inout bit;
+	               PT22A  :  inout bit;
+	               PT20B  :  inout bit;
+	               PT18B  :  inout bit;
+	               PT20A  :  inout bit;
+	               PT18A  :  inout bit;
+	               PT15B  :  inout bit;
+	               PT13B  :  inout bit;
+	               PT15A  :  inout bit;
+	               PT13A  :  inout bit;
+	               PT11B  :  inout bit;
+	                PT9B  :  inout bit;
+	               PT11A  :  inout bit;
+	                PT9A  :  inout bit;
+	                PT6B  :  inout bit;
+	                PT4B  :  inout bit;
+	                PT6A  :  inout bit;
+	                PT4A  :  inout bit;
+	                 GND  :  linkage bit_vector (1 to 27);
+	                 VCC  :  linkage bit_vector (1 to 6);
+	              VCCAUX  :  linkage bit_vector (1 to 2);
+	              VCCIO0  :  linkage bit_vector (1 to 2);
+	              VCCIO1  :  linkage bit_vector (1 to 2);
+	              VCCIO2  :  linkage bit_vector (1 to 2);
+	              VCCIO3  :  linkage bit_vector (1 to 2);
+	              VCCIO6  :  linkage bit_vector (1 to 2);
+	              VCCIO7  :  linkage bit_vector (1 to 2);
+	              VCCIO8  :  linkage bit_vector (1 to 1));
+-- Version Control
+	use STD_1149_1_2001.all;	-- 1149.1-2001 attributes
+
+-- Component Conformance Statement
+	attribute COMPONENT_CONFORMANCE of LFE5U_25F_XXBG256 : entity is "STD_1149_1_2001";
+
+-- Device Package Pin Mapping
+	attribute PIN_MAP of LFE5U_25F_XXBG256 : entity is PHYSICAL_PIN_MAP;
+
+	constant cabga256 : PIN_MAP_STRING :=
+		"        PL2A:   B1, " &
+		"        PL2B:   B2, " &
+		"        PL2C:   C3, " &
+		"        PL2D:   D3, " &
+		"        PL5A:   C1, " &
+		"        PL5C:   E3, " &
+		"        PL5B:   C2, " &
+		"        PL5D:   F3, " &
+		"        PL8A:   D1, " &
+		"        PL8C:   F4, " &
+		"        PL8B:   E2, " &
+		"        PL8D:   F5, " &
+		"       PL11A:   G5, " &
+		"       PL11C:   F2, " &
+		"       PL11B:   G4, " &
+		"       PL11D:   E1, " &
+		"       PL14A:   F1, " &
+		"       PL14C:   G3, " & --secfnc VREF1_7
+		"       PL14B:   G2, " &
+		"       PL14D:   H3, " &
+		"       PL17A:   H5, " &
+		"       PL17C:   J4, " &
+		"       PL17B:   H4, " &
+		"       PL17D:   J5, " &
+		"       PL20A:   G1, " & --secfnc GR_PCLK7_1
+		"       PL20C:   J3, " & --secfnc GR_PCLK7_0
+		"       PL20B:   H2, " &
+		"       PL20D:   K3, " &
+		"       PL23A:   J1, " & --secfnc PCLKT7_1
+		"       PL23C:   K1, " & --secfnc PCLKT7_0
+		"       PL23B:   J2, " & --secfnc PCLKC7_1
+		"       PL23D:   K2, " & --secfnc PCLKC7_0
+		"       PL26A:   L1, " & --secfnc PCLKT6_1
+		"       PL26C:   M1, " & --secfnc PCLKT6_0
+		"       PL26B:   L2, " & --secfnc PCLKC6_1
+		"       PL26D:   M2, " & --secfnc PCLKC6_0
+		"       PL29A:   K4, " & --secfnc GR_PCLK6_0
+		"       PL29C:   L4, " & --secfnc GR_PCLK6_1
+		"       PL29B:   K5, " &
+		"       PL29D:   L5, " &
+		"       PL32A:   N1, " &
+		"       PL32C:   L3, " &
+		"       PL32B:   P2, " &
+		"       PL32D:   M3, " &
+		"       PL35A:   P1, " &
+		"       PL35C:   M4, " &
+		"       PL35B:   R1, " & --secfnc VREF1_6
+		"       PL35D:   N3, " &
+		"       PL38A:   N4, " &
+		"       PL38C:   R2, " & --secfnc D15_IO15
+		"       PL38B:   P3, " &
+		"       PL38D:   T2, " & --secfnc D14_IO14
+		"       PL41A:   P4, " & --secfnc D13_IO13
+		"       PL41C:   R4, " & --secfnc D11_IO11
+		"       PL41B:   R3, " & --secfnc D12_IO12
+		"       PL41D:   T3, " & --secfnc D10_IO10
+		"       PL44A:   R5, " & --secfnc LLC_GPLL0T_MFGOUT2
+		"       PL44C:   M5, " & --secfnc D9_IO9
+		"       PL44B:   T4, " & --secfnc LLC_GPLL0C_MFGOUT2
+		"       PL44D:   N5, " & --secfnc D8_IO8
+		"       PL47A:   M6, " & --secfnc LLC_GPLL0T_MFGOUT1
+		"       PL47B:   N6, " & --secfnc LLC_GPLL0C_MFGOUT1
+		"       PL47C:   P6, " & --secfnc LLC_GPLL0T_IN
+		"       PL47D:   P5, " & --secfnc LLC_GPLL0C_IN
+		"        PB4A:   T6, " & --secfnc D7_IO7
+		"        PB6A:   R7, " & --secfnc D5_MISO2_IO5
+		"        PB4B:   R6, " & --secfnc D6_IO6
+		"        PB6B:   P7, " & --secfnc D4_MOSI2_IO4
+		"        PB9A:   N7, " & --secfnc D3_IO3
+		"       PB11A:   T7, " & --secfnc D1_MISO_IO1
+		"        PB9B:   M7, " & --secfnc D2_IO2
+		"       PB11B:   T8, " & --secfnc D0_MOSI_IO0
+		"       PB13A:   R8, " & --secfnc SN_CSN_SCAN_SHFT_EN
+		"       PB15A:   N8, " & --secfnc HOLDN_DI_BUSY_CSSPIN_CEN
+		"       PB13B:   P8, " & --secfnc CS1N
+		"       PB15B:   M8, " & --secfnc DOUT_CSON_ATB_FORCE
+		"       PB18A:   M9, " & --secfnc WRITEN_ATB_SENSE
+		"       INITN:   T9, " &
+		"        CCLK:   N9, " & --secfnc MCLK_SCK
+		"    PROGRAMN:   R9, " &
+		"        DONE:   P9, " &
+		"       CFG_1:  P10, " &
+		"       CFG_2:  R10, " &
+		"       CFG_0:  N10, " &
+		"         TDO:  M10, " &
+		"         TCK:  T10, " & --secfnc TEST_CLK
+		"         TDI:  R11, " &
+		"         TMS:  T11, " &
+		"       PR47D:  P12, " & --secfnc LRC_GPLL0C_IN_S7_OUT
+		"       PR47C:  P11, " & --secfnc LRC_GPLL0T_IN
+		"       PR47B:  N11, " & --secfnc LRC_GPLL0C_MFGOUT1
+		"       PR47A:  M11, " & --secfnc LRC_GPLL0T_MFGOUT1
+		"       PR44D:  N12, " & --secfnc LRC_GPLL0C_MFGOUT2
+		"       PR44B:  T13, " &
+		"       PR44C:  M12, " & --secfnc LRC_GPLL0T_MFGOUT2
+		"       PR44A:  R12, " &
+		"       PR41D:  T14, " &
+		"       PR41B:  R14, " & --secfnc S7_IN
+		"       PR41C:  R13, " &
+		"       PR41A:  P13, " & --secfnc S6_OUT
+		"       PR38D:  T15, " &
+		"       PR38B:  P14, " & --secfnc S6_IN
+		"       PR38C:  R15, " &
+		"       PR38A:  N13, " & --secfnc S5_OUT
+		"       PR35D:  N14, " &
+		"       PR35B:  R16, " & --secfnc VREF1_3
+		"       PR35C:  M13, " & --secfnc S5_IN
+		"       PR35A:  P16, " & --secfnc S4_OUT
+		"       PR32D:  M14, " &
+		"       PR32B:  P15, " &
+		"       PR32C:  L14, " &
+		"       PR32A:  N16, " &
+		"       PR29D:  L12, " &
+		"       PR29B:  K12, " &
+		"       PR29C:  L13, " & --secfnc GR_PCLK3_1
+		"       PR29A:  K13, " & --secfnc GR_PCLK3_0
+		"       PR26D:  M15, " & --secfnc PCLKC3_0
+		"       PR26B:  L15, " & --secfnc PCLKC3_1
+		"       PR26C:  M16, " & --secfnc PCLKT3_0_S4_IN
+		"       PR26A:  L16, " & --secfnc PCLKT3_1_S3_OUT
+		"       PR23D:  K15, " & --secfnc PCLKC2_0
+		"       PR23B:  J15, " & --secfnc PCLKC2_1
+		"       PR23C:  K16, " & --secfnc PCLKT2_0_S3_IN
+		"       PR23A:  J16, " & --secfnc PCLKT2_1_S2_OUT
+		"       PR20D:  K14, " &
+		"       PR20B:  H15, " &
+		"       PR20C:  J14, " & --secfnc GR_PCLK2_0
+		"       PR20A:  G16, " & --secfnc GR_PCLK2_1
+		"       PR17D:  J12, " &
+		"       PR17B:  H13, " &
+		"       PR17C:  J13, " &
+		"       PR17A:  H12, " &
+		"       PR14D:  H14, " &
+		"       PR14B:  G15, " & --secfnc S2_IN
+		"       PR14C:  G14, " & --secfnc VREF1_2
+		"       PR14A:  F16, " & --secfnc S1_OUT
+		"       PR11D:  E16, " &
+		"       PR11B:  G13, " &
+		"       PR11C:  F15, " &
+		"       PR11A:  G12, " &
+		"        PR8D:  F12, " &
+		"        PR8B:  E15, " &
+		"        PR8C:  F13, " &
+		"        PR8A:  D16, " &
+		"        PR5D:  F14, " &
+		"        PR5B:  C15, " & --secfnc S1_IN
+		"        PR5C:  E14, " &
+		"        PR5A:  C16, " & --secfnc S0_OUT
+		"        PR2D:  D14, " &
+		"        PR2C:  C14, " &
+		"        PR2B:  B15, " & --secfnc S0_IN
+		"        PR2A:  B16, " &
+		"       PT67B:  A15, " &
+		"       PT65B:  A14, " &
+		"       PT67A:  B14, " &
+		"       PT65A:  A13, " &
+		"       PT62B:  E13, " &
+		"       PT60B:  C13, " &
+		"       PT62A:  D13, " &
+		"       PT60A:  B13, " &
+		"       PT58B:  E12, " &
+		"       PT56B:  C12, " &
+		"       PT58A:  D12, " &
+		"       PT56A:  B12, " &
+		"       PT53B:  A12, " &
+		"       PT51B:  E11, " &
+		"       PT53A:  A11, " &
+		"       PT51A:  D11, " &
+		"       PT49B:  C11, " &
+		"       PT47B:  E10, " &
+		"       PT49A:  B11, " &
+		"       PT47A:  D10, " &
+		"       PT44B:  C10, " &
+		"       PT42B:  A10, " &
+		"       PT44A:  B10, " &
+		"       PT42A:   A9, " &
+		"       PT40B:   E9, " &
+		"       PT38B:   C9, " & --secfnc GR_PCLK1_1
+		"       PT40A:   D9, " &
+		"       PT38A:   B9, " & --secfnc GR_PCLK1_0
+		"       PT35B:   B8, " &
+		"       PT33B:   D8, " &
+		"       PT35A:   C8, " & --secfnc PCLKT1_0
+		"       PT33A:   E8, " & --secfnc PCLKT1_1
+		"       PT29B:   A8, " &
+		"       PT27B:   B7, " &
+		"       PT29A:   A7, " & --secfnc PCLKT0_0
+		"       PT27A:   C7, " & --secfnc PCLKT0_1
+		"       PT24B:   D7, " & --secfnc GR_PCLK0_0
+		"       PT22B:   B6, " &
+		"       PT24A:   E7, " & --secfnc GR_PCLK0_1
+		"       PT22A:   C6, " &
+		"       PT20B:   D6, " &
+		"       PT18B:   A6, " &
+		"       PT20A:   E6, " &
+		"       PT18A:   A5, " &
+		"       PT15B:   B5, " &
+		"       PT13B:   D5, " &
+		"       PT15A:   C5, " &
+		"       PT13A:   E5, " &
+		"       PT11B:   B4, " &
+		"        PT9B:   D4, " &
+		"       PT11A:   C4, " &
+		"        PT9A:   E4, " &
+		"        PT6B:   A4, " &
+		"        PT4B:   B3, " &
+		"        PT6A:   A3, " &
+		"        PT4A:   A2, " &
+		"         GND: ( A16, " &
+		"               H16, " &
+		"               T16, " &
+		"               D15, " &
+		"               N15, " &
+		"               T12, " &
+		"               G10, " &
+		"               H10, " &
+		"               J10, " &
+		"               K10, " &
+		"                F9, " &
+		"                H9, " &
+		"                J9, " &
+		"                K9, " &
+		"                F8, " &
+		"                G8, " &
+		"                H8, " &
+		"                J8, " &
+		"                K8, " &
+		"                K7, " &
+		"                K6, " &
+		"                T5, " &
+		"                D2, " &
+		"                N2, " &
+		"                A1, " &
+		"                H1, " &
+		"                T1), " &
+		"         VCC: ( L10, " &
+		"                G9, " &
+		"                L9, " &
+		"                L8, " &
+		"                G7, " &
+		"                G6), " &
+		"      VCCAUX: ( G11, " &
+		"                L7), " &
+		"      VCCIO0: (  F7, " &
+		"                F6), " &
+		"      VCCIO1: ( F11, " &
+		"               F10), " &
+		"      VCCIO2: ( H11, " &
+		"               J11), " &
+		"      VCCIO3: ( K11, " &
+		"               L11), " &
+		"      VCCIO6: (  J7, " &
+		"                J6), " &
+		"      VCCIO7: (  H7, " &
+		"                H6), " &
+		"      VCCIO8: (  L6)";
+
+-- End of pin mapping
+
+-- Grouped port mapping and definition
+--	attribute PORT_GROUPING of LFE5U_25F_XXBG256 : entity is
+--		"DIFFERENTIAL_CURRENT ( " &
+--		"(PB11A, PB11B)," &
+--		"(PB13A, PB13B)," &
+--		"(PB15A, PB15B)," &
+--		"(PB4A, PB4B)," &
+--		"(PB6A, PB6B)," &
+--		"(PB9A, PB9B)," &
+--		"(PL11A, PL11B)," &
+--		"(PL11C, PL11D)," &
+--		"(PL14A, PL14B)," &
+--		"(PL14C, PL14D)," &
+--		"(PL17A, PL17B)," &
+--		"(PL17C, PL17D)," &
+--		"(PL20A, PL20B)," &
+--		"(PL20C, PL20D)," &
+--		"(PL23A, PL23B)," &
+--		"(PL23C, PL23D)," &
+--		"(PL26A, PL26B)," &
+--		"(PL26C, PL26D)," &
+--		"(PL29A, PL29B)," &
+--		"(PL29C, PL29D)," &
+--		"(PL2A, PL2B)," &
+--		"(PL2C, PL2D)," &
+--		"(PL32A, PL32B)," &
+--		"(PL32C, PL32D)," &
+--		"(PL35A, PL35B)," &
+--		"(PL35C, PL35D)," &
+--		"(PL38A, PL38B)," &
+--		"(PL38C, PL38D)," &
+--		"(PL41A, PL41B)," &
+--		"(PL41C, PL41D)," &
+--		"(PL44A, PL44B)," &
+--		"(PL44C, PL44D)," &
+--		"(PL47A, PL47B)," &
+--		"(PL47C, PL47D)," &
+--		"(PL5A, PL5B)," &
+--		"(PL5C, PL5D)," &
+--		"(PL8A, PL8B)," &
+--		"(PL8C, PL8D)," &
+--		"(PR11A, PR11B)," &
+--		"(PR11C, PR11D)," &
+--		"(PR14A, PR14B)," &
+--		"(PR14C, PR14D)," &
+--		"(PR17A, PR17B)," &
+--		"(PR17C, PR17D)," &
+--		"(PR20A, PR20B)," &
+--		"(PR20C, PR20D)," &
+--		"(PR23A, PR23B)," &
+--		"(PR23C, PR23D)," &
+--		"(PR26A, PR26B)," &
+--		"(PR26C, PR26D)," &
+--		"(PR29A, PR29B)," &
+--		"(PR29C, PR29D)," &
+--		"(PR2A, PR2B)," &
+--		"(PR2C, PR2D)," &
+--		"(PR32A, PR32B)," &
+--		"(PR32C, PR32D)," &
+--		"(PR35A, PR35B)," &
+--		"(PR35C, PR35D)," &
+--		"(PR38A, PR38B)," &
+--		"(PR38C, PR38D)," &
+--		"(PR41A, PR41B)," &
+--		"(PR41C, PR41D)," &
+--		"(PR44A, PR44B)," &
+--		"(PR44C, PR44D)," &
+--		"(PR47A, PR47B)," &
+--		"(PR47C, PR47D)," &
+--		"(PR5A, PR5B)," &
+--		"(PR5C, PR5D)," &
+--		"(PR8A, PR8B)," &
+--		"(PR8C, PR8D)," &
+--		"(PT11A, PT11B)," &
+--		"(PT13A, PT13B)," &
+--		"(PT15A, PT15B)," &
+--		"(PT18A, PT18B)," &
+--		"(PT20A, PT20B)," &
+--		"(PT22A, PT22B)," &
+--		"(PT24A, PT24B)," &
+--		"(PT27A, PT27B)," &
+--		"(PT29A, PT29B)," &
+--		"(PT33A, PT33B)," &
+--		"(PT35A, PT35B)," &
+--		"(PT38A, PT38B)," &
+--		"(PT40A, PT40B)," &
+--		"(PT42A, PT42B)," &
+--		"(PT44A, PT44B)," &
+--		"(PT47A, PT47B)," &
+--		"(PT49A, PT49B)," &
+--		"(PT4A, PT4B)," &
+--		"(PT51A, PT51B)," &
+--		"(PT53A, PT53B)," &
+--		"(PT56A, PT56B)," &
+--		"(PT58A, PT58B)," &
+--		"(PT60A, PT60B)," &
+--		"(PT62A, PT62B)," &
+--		"(PT65A, PT65B)," &
+--		"(PT67A, PT67B)," &
+--		"(PT6A, PT6B)," &
+--		"(PT9A, PT9B)," &
+-- End of grouped port mapping
+
+-- TAP definition and characteristics
+	attribute TAP_SCAN_IN   of TDI : signal is true;
+	attribute TAP_SCAN_MODE of TMS : signal is true;
+	attribute TAP_SCAN_OUT  of TDO : signal is true;
+	attribute TAP_SCAN_CLOCK of TCK : signal is (25.0e6, BOTH);
+
+-- Instruction register description
+	attribute INSTRUCTION_LENGTH of LFE5U_25F_XXBG256 : entity is 8;
+	attribute INSTRUCTION_OPCODE of LFE5U_25F_XXBG256 : entity is
+		"              IDCODE		(11100000)," &
+		"          ISC_ENABLE		(11000110)," &
+		"    ISC_PROGRAM_DONE		(01011110)," &
+		" LSC_PROGRAM_SECPLUS		(11001111)," &
+		"ISC_PROGRAM_USERCODE		(11000010)," &
+		"ISC_PROGRAM_SECURITY		(11001110)," &
+		"         ISC_PROGRAM		(01100111)," &
+		"        LSC_ENABLE_X		(01110100)," &
+		"              BYPASS		(11111111)," &
+		"      ISC_DATA_SHIFT		(00001010)," &
+		"       ISC_DISCHARGE		(00010100)," &
+		"            USERCODE		(11000000)," &
+		"      ISC_ERASE_DONE		(00100100)," &
+		"               CLAMP		(01111000)," &
+		"   ISC_ADDRESS_SHIFT		(01000010)," &
+		"             PRELOAD		(00011100)," &
+		"            ISC_READ		(10000000)," &
+		"         ISC_DISABLE		(00100110)," &
+		"           ISC_ERASE		(00001110)," &
+		"            ISC_NOOP		(00110000)," &
+		"              SAMPLE		(00011100)," &
+		"               HIGHZ		(00011000)," &
+		"              EXTEST		(00010101)," &
+		"PRIVATE	(00000010, 00111010, 00110010, 10111010, " &
+			"11011100, 11110001, 11100010, 00101100, " &
+			"11010000, 11110110, 11110100, 10010110, " &
+			"10110010, 01000110, 11011000, 10111000, " &
+			"10011101, 10100010, 11111010, 01110010, " &
+			"00111111, 10001111, 01110000, 11110111, " &
+			"00101110, 11010110, 00111011, 00010110, " &
+			"11110011, 10011100, 11101000, 01101010, " &
+			"01111101, 11010001, 11010111, 00101101, " &
+			"11011101, 11001010, 00111000, 01100000, " &
+			"11110010, 11111000, 10000010, 00111001, " &
+			"00100010, 10010000, 11011110, 00111100, " &
+			"11010100, 11110000, 10011111, 00010001, " &
+			"11010101, 01101001, 01110011, 11100111, " &
+			"10100100, 11011111, 00011001, 11011010, " &
+			"00110011, 11111001, 10110100, 10110000, " &
+			"01111010, 10110110, 11001011, 01111001, " &
+			"11100100, 00100000, 10111100, 11001001, " &
+			"10011110, 11111011, 11010011, 01000111)";
+
+  attribute INSTRUCTION_CAPTURE of LFE5U_25F_XXBG256 : entity is
+                                  "0XXXXX01";
+  attribute INSTRUCTION_PRIVATE of LFE5U_25F_XXBG256 : entity is
+                                  "PRIVATE";
+
+--IDCODE and USERCODE register definition
+	attribute IDCODE_REGISTER of LFE5U_25F_XXBG256 : entity is
+		"0100" &	--Version number
+		"0001000100010001" &	--Device specific number
+		"000001000011";	--Company code
+
+	attribute USERCODE_REGISTER of LFE5U_25F_XXBG256 : entity is
+		"11111111111111111111111111111111";
+
+	attribute REGISTER_ACCESS of LFE5U_25F_XXBG256 : entity is
+		"ISC_ADDRESS[16]		(ISC_ADDRESS_SHIFT), " &
+		"ISC_SECTOR[8]		(ISC_ERASE), " &
+		"ISC_DEFAULT[1]		(ISC_DISABLE, " &
+		"			 ISC_NOOP, " &
+		"			 ISC_DISCHARGE, " &
+		"			 ISC_PROGRAM_DONE, " &
+		"			 ISC_ERASE_DONE, " &
+		"			 ISC_PROGRAM_SECURITY, " &
+		"			 LSC_PROGRAM_SECPLUS), " &
+		"BYPASS		(CLAMP, " &
+		"			 HIGHZ, " &
+		"			 BYPASS), " &
+		"ISC_CONFIG[8]		(ISC_ENABLE, " &
+		"			 LSC_ENABLE_X), " &
+		"ISC_PDATA[592]		(ISC_PROGRAM, " &
+		"			 ISC_READ, " &
+		"			 ISC_DATA_SHIFT), " &
+		"BOUNDARY		(EXTEST, " &
+		"			 PRELOAD, " &
+		"			 SAMPLE), " &
+		"DEVICE_ID		(IDCODE, " &
+		"			 USERCODE, " &
+		"			 ISC_PROGRAM_USERCODE)";
+
+-- *****************************************************************
+-- Boundary Scan Register Description, Cell 0 is the closest to TDO
+-- *****************************************************************
+	attribute BOUNDARY_LENGTH of LFE5U_25F_XXBG256 : entity is 409;
+	attribute BOUNDARY_REGISTER of LFE5U_25F_XXBG256 : entity is
+
+		"408 (BC_4, CFG_0, OBSERVE_ONLY, X), " &
+		"407 (BC_4, CFG_1, OBSERVE_ONLY, X), " &
+		"406 (BC_4, CFG_2, OBSERVE_ONLY, X), " &
+		"405 (BC_7, DONE, bidir, X, 404, 1, Z), " &
+		"404 (BC_2, *, control, 1), " &
+		"403 (BC_4, PROGRAMN, OBSERVE_ONLY, 1), " &
+		"402 (BC_7, INITN, bidir, X, 401, 1, Z), " &
+		"401 (BC_2, *, control, 1), " &
+		"400 (BC_7, CCLK, bidir, X, 399, 1, Z), " &
+		"399 (BC_2, *, control, 1), " &
+		"398 (BC_7, PB18A, bidir, X, 397, 1, Z), " &
+		"397 (BC_2, *, control, 1), " &
+		"396 (BC_7, PB15B, bidir, X, 395, 1, Z), " &
+		"395 (BC_2, *, control, 1), " &
+		"394 (BC_7, PB15A, bidir, X, 393, 1, Z), " &
+		"393 (BC_2, *, control, 1), " &
+		"392 (BC_7, PB13B, bidir, X, 391, 1, Z), " &
+		"391 (BC_2, *, control, 1), " &
+		"390 (BC_7, PB13A, bidir, X, 389, 1, Z), " &
+		"389 (BC_2, *, control, 1), " &
+		"388 (BC_7, PB11B, bidir, X, 387, 1, Z), " &
+		"387 (BC_2, *, control, 1), " &
+		"386 (BC_7, PB11A, bidir, X, 385, 1, Z), " &
+		"385 (BC_2, *, control, 1), " &
+		"384 (BC_7, PB9B, bidir, X, 383, 1, Z), " &
+		"383 (BC_2, *, control, 1), " &
+		"382 (BC_7, PB9A, bidir, X, 381, 1, Z), " &
+		"381 (BC_2, *, control, 1), " &
+		"380 (BC_7, PB6B, bidir, X, 379, 1, Z), " &
+		"379 (BC_2, *, control, 1), " &
+		"378 (BC_7, PB6A, bidir, X, 377, 1, Z), " &
+		"377 (BC_2, *, control, 1), " &
+		"376 (BC_7, PB4B, bidir, X, 375, 1, Z), " &
+		"375 (BC_2, *, control, 1), " &
+		"374 (BC_7, PB4A, bidir, X, 373, 1, Z), " &
+		"373 (BC_2, *, control, 1), " &
+		"372 (BC_7, PL47D, bidir, X, 371, 1, Z), " &
+		"371 (BC_2, *, control, 1), " &
+		"370 (BC_7, PL47C, bidir, X, 369, 1, Z), " &
+		"369 (BC_2, *, control, 1), " &
+		"368 (BC_7, PL47B, bidir, X, 367, 1, Z), " &
+		"367 (BC_2, *, control, 1), " &
+		"366 (BC_7, PL47A, bidir, X, 365, 1, Z), " &
+		"365 (BC_2, *, control, 1), " &
+		"364 (BC_7, PL44D, bidir, X, 363, 1, Z), " &
+		"363 (BC_2, *, control, 1), " &
+		"362 (BC_7, PL44C, bidir, X, 361, 1, Z), " &
+		"361 (BC_2, *, control, 1), " &
+		"360 (BC_7, PL44B, bidir, X, 359, 1, Z), " &
+		"359 (BC_2, *, control, 1), " &
+		"358 (BC_7, PL44A, bidir, X, 357, 1, Z), " &
+		"357 (BC_2, *, control, 1), " &
+		"356 (BC_7, PL41D, bidir, X, 355, 1, Z), " &
+		"355 (BC_2, *, control, 1), " &
+		"354 (BC_7, PL41C, bidir, X, 353, 1, Z), " &
+		"353 (BC_2, *, control, 1), " &
+		"352 (BC_7, PL41B, bidir, X, 351, 1, Z), " &
+		"351 (BC_2, *, control, 1), " &
+		"350 (BC_7, PL41A, bidir, X, 349, 1, Z), " &
+		"349 (BC_2, *, control, 1), " &
+		"348 (BC_7, PL38D, bidir, X, 347, 1, Z), " &
+		"347 (BC_2, *, control, 1), " &
+		"346 (BC_7, PL38C, bidir, X, 345, 1, Z), " &
+		"345 (BC_2, *, control, 1), " &
+		"344 (BC_7, PL38B, bidir, X, 343, 1, Z), " &
+		"343 (BC_2, *, control, 1), " &
+		"342 (BC_7, PL38A, bidir, X, 341, 1, Z), " &
+		"341 (BC_2, *, control, 1), " &
+		"340 (BC_7, PL35D, bidir, X, 339, 1, Z), " &
+		"339 (BC_2, *, control, 1), " &
+		"338 (BC_7, PL35C, bidir, X, 337, 1, Z), " &
+		"337 (BC_2, *, control, 1), " &
+		"336 (BC_7, PL35B, bidir, X, 335, 1, Z), " &
+		"335 (BC_2, *, control, 1), " &
+		"334 (BC_7, PL35A, bidir, X, 333, 1, Z), " &
+		"333 (BC_2, *, control, 1), " &
+		"332 (BC_7, PL32D, bidir, X, 331, 1, Z), " &
+		"331 (BC_2, *, control, 1), " &
+		"330 (BC_7, PL32C, bidir, X, 329, 1, Z), " &
+		"329 (BC_2, *, control, 1), " &
+		"328 (BC_7, PL32B, bidir, X, 327, 1, Z), " &
+		"327 (BC_2, *, control, 1), " &
+		"326 (BC_7, PL32A, bidir, X, 325, 1, Z), " &
+		"325 (BC_2, *, control, 1), " &
+		"324 (BC_7, PL29D, bidir, X, 323, 1, Z), " &
+		"323 (BC_2, *, control, 1), " &
+		"322 (BC_7, PL29C, bidir, X, 321, 1, Z), " &
+		"321 (BC_2, *, control, 1), " &
+		"320 (BC_7, PL29B, bidir, X, 319, 1, Z), " &
+		"319 (BC_2, *, control, 1), " &
+		"318 (BC_7, PL29A, bidir, X, 317, 1, Z), " &
+		"317 (BC_2, *, control, 1), " &
+		"316 (BC_7, PL26D, bidir, X, 315, 1, Z), " &
+		"315 (BC_2, *, control, 1), " &
+		"314 (BC_7, PL26C, bidir, X, 313, 1, Z), " &
+		"313 (BC_2, *, control, 1), " &
+		"312 (BC_7, PL26B, bidir, X, 311, 1, Z), " &
+		"311 (BC_2, *, control, 1), " &
+		"310 (BC_7, PL26A, bidir, X, 309, 1, Z), " &
+		"309 (BC_2, *, control, 1), " &
+		"308 (BC_7, PL23D, bidir, X, 307, 1, Z), " &
+		"307 (BC_2, *, control, 1), " &
+		"306 (BC_7, PL23C, bidir, X, 305, 1, Z), " &
+		"305 (BC_2, *, control, 1), " &
+		"304 (BC_7, PL23B, bidir, X, 303, 1, Z), " &
+		"303 (BC_2, *, control, 1), " &
+		"302 (BC_7, PL23A, bidir, X, 301, 1, Z), " &
+		"301 (BC_2, *, control, 1), " &
+		"300 (BC_7, PL20D, bidir, X, 299, 1, Z), " &
+		"299 (BC_2, *, control, 1), " &
+		"298 (BC_7, PL20C, bidir, X, 297, 1, Z), " &
+		"297 (BC_2, *, control, 1), " &
+		"296 (BC_7, PL20B, bidir, X, 295, 1, Z), " &
+		"295 (BC_2, *, control, 1), " &
+		"294 (BC_7, PL20A, bidir, X, 293, 1, Z), " &
+		"293 (BC_2, *, control, 1), " &
+		"292 (BC_7, PL17D, bidir, X, 291, 1, Z), " &
+		"291 (BC_2, *, control, 1), " &
+		"290 (BC_7, PL17C, bidir, X, 289, 1, Z), " &
+		"289 (BC_2, *, control, 1), " &
+		"288 (BC_7, PL17B, bidir, X, 287, 1, Z), " &
+		"287 (BC_2, *, control, 1), " &
+		"286 (BC_7, PL17A, bidir, X, 285, 1, Z), " &
+		"285 (BC_2, *, control, 1), " &
+		"284 (BC_7, PL14D, bidir, X, 283, 1, Z), " &
+		"283 (BC_2, *, control, 1), " &
+		"282 (BC_7, PL14C, bidir, X, 281, 1, Z), " &
+		"281 (BC_2, *, control, 1), " &
+		"280 (BC_7, PL14B, bidir, X, 279, 1, Z), " &
+		"279 (BC_2, *, control, 1), " &
+		"278 (BC_7, PL14A, bidir, X, 277, 1, Z), " &
+		"277 (BC_2, *, control, 1), " &
+		"276 (BC_7, PL11D, bidir, X, 275, 1, Z), " &
+		"275 (BC_2, *, control, 1), " &
+		"274 (BC_7, PL11C, bidir, X, 273, 1, Z), " &
+		"273 (BC_2, *, control, 1), " &
+		"272 (BC_7, PL11B, bidir, X, 271, 1, Z), " &
+		"271 (BC_2, *, control, 1), " &
+		"270 (BC_7, PL11A, bidir, X, 269, 1, Z), " &
+		"269 (BC_2, *, control, 1), " &
+		"268 (BC_7, PL8D, bidir, X, 267, 1, Z), " &
+		"267 (BC_2, *, control, 1), " &
+		"266 (BC_7, PL8C, bidir, X, 265, 1, Z), " &
+		"265 (BC_2, *, control, 1), " &
+		"264 (BC_7, PL8B, bidir, X, 263, 1, Z), " &
+		"263 (BC_2, *, control, 1), " &
+		"262 (BC_7, PL8A, bidir, X, 261, 1, Z), " &
+		"261 (BC_2, *, control, 1), " &
+		"260 (BC_7, PL5D, bidir, X, 259, 1, Z), " &
+		"259 (BC_2, *, control, 1), " &
+		"258 (BC_7, PL5C, bidir, X, 257, 1, Z), " &
+		"257 (BC_2, *, control, 1), " &
+		"256 (BC_7, PL5B, bidir, X, 255, 1, Z), " &
+		"255 (BC_2, *, control, 1), " &
+		"254 (BC_7, PL5A, bidir, X, 253, 1, Z), " &
+		"253 (BC_2, *, control, 1), " &
+		"252 (BC_7, PL2D, bidir, X, 251, 1, Z), " &
+		"251 (BC_2, *, control, 1), " &
+		"250 (BC_7, PL2C, bidir, X, 249, 1, Z), " &
+		"249 (BC_2, *, control, 1), " &
+		"248 (BC_7, PL2B, bidir, X, 247, 1, Z), " &
+		"247 (BC_2, *, control, 1), " &
+		"246 (BC_7, PL2A, bidir, X, 245, 1, Z), " &
+		"245 (BC_2, *, control, 1), " &
+		"244 (BC_7, PT4A, bidir, X, 243, 1, Z), " &
+		"243 (BC_2, *, control, 1), " &
+		"242 (BC_7, PT4B, bidir, X, 241, 1, Z), " &
+		"241 (BC_2, *, control, 1), " &
+		"240 (BC_7, PT6A, bidir, X, 239, 1, Z), " &
+		"239 (BC_2, *, control, 1), " &
+		"238 (BC_7, PT6B, bidir, X, 237, 1, Z), " &
+		"237 (BC_2, *, control, 1), " &
+		"236 (BC_7, PT9A, bidir, X, 235, 1, Z), " &
+		"235 (BC_2, *, control, 1), " &
+		"234 (BC_7, PT9B, bidir, X, 233, 1, Z), " &
+		"233 (BC_2, *, control, 1), " &
+		"232 (BC_7, PT11A, bidir, X, 231, 1, Z), " &
+		"231 (BC_2, *, control, 1), " &
+		"230 (BC_7, PT11B, bidir, X, 229, 1, Z), " &
+		"229 (BC_2, *, control, 1), " &
+		"228 (BC_7, PT13A, bidir, X, 227, 1, Z), " &
+		"227 (BC_2, *, control, 1), " &
+		"226 (BC_7, PT13B, bidir, X, 225, 1, Z), " &
+		"225 (BC_2, *, control, 1), " &
+		"224 (BC_7, PT15A, bidir, X, 223, 1, Z), " &
+		"223 (BC_2, *, control, 1), " &
+		"222 (BC_7, PT15B, bidir, X, 221, 1, Z), " &
+		"221 (BC_2, *, control, 1), " &
+		"220 (BC_7, PT18A, bidir, X, 219, 1, Z), " &
+		"219 (BC_2, *, control, 1), " &
+		"218 (BC_7, PT18B, bidir, X, 217, 1, Z), " &
+		"217 (BC_2, *, control, 1), " &
+		"216 (BC_7, PT20A, bidir, X, 215, 1, Z), " &
+		"215 (BC_2, *, control, 1), " &
+		"214 (BC_7, PT20B, bidir, X, 213, 1, Z), " &
+		"213 (BC_2, *, control, 1), " &
+		"212 (BC_7, PT22A, bidir, X, 211, 1, Z), " &
+		"211 (BC_2, *, control, 1), " &
+		"210 (BC_7, PT22B, bidir, X, 209, 1, Z), " &
+		"209 (BC_2, *, control, 1), " &
+		"208 (BC_7, PT24A, bidir, X, 207, 1, Z), " &
+		"207 (BC_2, *, control, 1), " &
+		"206 (BC_7, PT24B, bidir, X, 205, 1, Z), " &
+		"205 (BC_2, *, control, 1), " &
+		"204 (BC_7, PT27A, bidir, X, 203, 1, Z), " &
+		"203 (BC_2, *, control, 1), " &
+		"202 (BC_7, PT27B, bidir, X, 201, 1, Z), " &
+		"201 (BC_2, *, control, 1), " &
+		"200 (BC_7, PT29A, bidir, X, 199, 1, Z), " &
+		"199 (BC_2, *, control, 1), " &
+		"198 (BC_7, PT29B, bidir, X, 197, 1, Z), " &
+		"197 (BC_2, *, control, 1), " &
+		"196 (BC_7, PT33A, bidir, X, 195, 1, Z), " &
+		"195 (BC_2, *, control, 1), " &
+		"194 (BC_7, PT33B, bidir, X, 193, 1, Z), " &
+		"193 (BC_2, *, control, 1), " &
+		"192 (BC_7, PT35A, bidir, X, 191, 1, Z), " &
+		"191 (BC_2, *, control, 1), " &
+		"190 (BC_7, PT35B, bidir, X, 189, 1, Z), " &
+		"189 (BC_2, *, control, 1), " &
+		"188 (BC_7, PT38A, bidir, X, 187, 1, Z), " &
+		"187 (BC_2, *, control, 1), " &
+		"186 (BC_7, PT38B, bidir, X, 185, 1, Z), " &
+		"185 (BC_2, *, control, 1), " &
+		"184 (BC_7, PT40A, bidir, X, 183, 1, Z), " &
+		"183 (BC_2, *, control, 1), " &
+		"182 (BC_7, PT40B, bidir, X, 181, 1, Z), " &
+		"181 (BC_2, *, control, 1), " &
+		"180 (BC_7, PT42A, bidir, X, 179, 1, Z), " &
+		"179 (BC_2, *, control, 1), " &
+		"178 (BC_7, PT42B, bidir, X, 177, 1, Z), " &
+		"177 (BC_2, *, control, 1), " &
+		"176 (BC_7, PT44A, bidir, X, 175, 1, Z), " &
+		"175 (BC_2, *, control, 1), " &
+		"174 (BC_7, PT44B, bidir, X, 173, 1, Z), " &
+		"173 (BC_2, *, control, 1), " &
+		"172 (BC_7, PT47A, bidir, X, 171, 1, Z), " &
+		"171 (BC_2, *, control, 1), " &
+		"170 (BC_7, PT47B, bidir, X, 169, 1, Z), " &
+		"169 (BC_2, *, control, 1), " &
+		"168 (BC_7, PT49A, bidir, X, 167, 1, Z), " &
+		"167 (BC_2, *, control, 1), " &
+		"166 (BC_7, PT49B, bidir, X, 165, 1, Z), " &
+		"165 (BC_2, *, control, 1), " &
+		"164 (BC_7, PT51A, bidir, X, 163, 1, Z), " &
+		"163 (BC_2, *, control, 1), " &
+		"162 (BC_7, PT51B, bidir, X, 161, 1, Z), " &
+		"161 (BC_2, *, control, 1), " &
+		"160 (BC_7, PT53A, bidir, X, 159, 1, Z), " &
+		"159 (BC_2, *, control, 1), " &
+		"158 (BC_7, PT53B, bidir, X, 157, 1, Z), " &
+		"157 (BC_2, *, control, 1), " &
+		"156 (BC_7, PT56A, bidir, X, 155, 1, Z), " &
+		"155 (BC_2, *, control, 1), " &
+		"154 (BC_7, PT56B, bidir, X, 153, 1, Z), " &
+		"153 (BC_2, *, control, 1), " &
+		"152 (BC_7, PT58A, bidir, X, 151, 1, Z), " &
+		"151 (BC_2, *, control, 1), " &
+		"150 (BC_7, PT58B, bidir, X, 149, 1, Z), " &
+		"149 (BC_2, *, control, 1), " &
+		"148 (BC_7, PT60A, bidir, X, 147, 1, Z), " &
+		"147 (BC_2, *, control, 1), " &
+		"146 (BC_7, PT60B, bidir, X, 145, 1, Z), " &
+		"145 (BC_2, *, control, 1), " &
+		"144 (BC_7, PT62A, bidir, X, 143, 1, Z), " &
+		"143 (BC_2, *, control, 1), " &
+		"142 (BC_7, PT62B, bidir, X, 141, 1, Z), " &
+		"141 (BC_2, *, control, 1), " &
+		"140 (BC_7, PT65A, bidir, X, 139, 1, Z), " &
+		"139 (BC_2, *, control, 1), " &
+		"138 (BC_7, PT65B, bidir, X, 137, 1, Z), " &
+		"137 (BC_2, *, control, 1), " &
+		"136 (BC_7, PT67A, bidir, X, 135, 1, Z), " &
+		"135 (BC_2, *, control, 1), " &
+		"134 (BC_7, PT67B, bidir, X, 133, 1, Z), " &
+		"133 (BC_2, *, control, 1), " &
+		"132 (BC_7, PR2A, bidir, X, 131, 1, Z), " &
+		"131 (BC_2, *, control, 1), " &
+		"130 (BC_7, PR2B, bidir, X, 129, 1, Z), " &
+		"129 (BC_2, *, control, 1), " &
+		"128 (BC_7, PR2C, bidir, X, 127, 1, Z), " &
+		"127 (BC_2, *, control, 1), " &
+		"126 (BC_7, PR2D, bidir, X, 125, 1, Z), " &
+		"125 (BC_2, *, control, 1), " &
+		"124 (BC_7, PR5A, bidir, X, 123, 1, Z), " &
+		"123 (BC_2, *, control, 1), " &
+		"122 (BC_7, PR5B, bidir, X, 121, 1, Z), " &
+		"121 (BC_2, *, control, 1), " &
+		"120 (BC_7, PR5C, bidir, X, 119, 1, Z), " &
+		"119 (BC_2, *, control, 1), " &
+		"118 (BC_7, PR5D, bidir, X, 117, 1, Z), " &
+		"117 (BC_2, *, control, 1), " &
+		"116 (BC_7, PR8A, bidir, X, 115, 1, Z), " &
+		"115 (BC_2, *, control, 1), " &
+		"114 (BC_7, PR8B, bidir, X, 113, 1, Z), " &
+		"113 (BC_2, *, control, 1), " &
+		"112 (BC_7, PR8C, bidir, X, 111, 1, Z), " &
+		"111 (BC_2, *, control, 1), " &
+		"110 (BC_7, PR8D, bidir, X, 109, 1, Z), " &
+		"109 (BC_2, *, control, 1), " &
+		"108 (BC_7, PR11A, bidir, X, 107, 1, Z), " &
+		"107 (BC_2, *, control, 1), " &
+		"106 (BC_7, PR11B, bidir, X, 105, 1, Z), " &
+		"105 (BC_2, *, control, 1), " &
+		"104 (BC_7, PR11C, bidir, X, 103, 1, Z), " &
+		"103 (BC_2, *, control, 1), " &
+		"102 (BC_7, PR11D, bidir, X, 101, 1, Z), " &
+		"101 (BC_2, *, control, 1), " &
+		"100 (BC_7, PR14A, bidir, X, 99, 1, Z), " &
+		"99 (BC_2, *, control, 1), " &
+		"98 (BC_7, PR14B, bidir, X, 97, 1, Z), " &
+		"97 (BC_2, *, control, 1), " &
+		"96 (BC_7, PR14C, bidir, X, 95, 1, Z), " &
+		"95 (BC_2, *, control, 1), " &
+		"94 (BC_7, PR14D, bidir, X, 93, 1, Z), " &
+		"93 (BC_2, *, control, 1), " &
+		"92 (BC_7, PR17A, bidir, X, 91, 1, Z), " &
+		"91 (BC_2, *, control, 1), " &
+		"90 (BC_7, PR17B, bidir, X, 89, 1, Z), " &
+		"89 (BC_2, *, control, 1), " &
+		"88 (BC_7, PR17C, bidir, X, 87, 1, Z), " &
+		"87 (BC_2, *, control, 1), " &
+		"86 (BC_7, PR17D, bidir, X, 85, 1, Z), " &
+		"85 (BC_2, *, control, 1), " &
+		"84 (BC_7, PR20A, bidir, X, 83, 1, Z), " &
+		"83 (BC_2, *, control, 1), " &
+		"82 (BC_7, PR20B, bidir, X, 81, 1, Z), " &
+		"81 (BC_2, *, control, 1), " &
+		"80 (BC_7, PR20C, bidir, X, 79, 1, Z), " &
+		"79 (BC_2, *, control, 1), " &
+		"78 (BC_7, PR20D, bidir, X, 77, 1, Z), " &
+		"77 (BC_2, *, control, 1), " &
+		"76 (BC_7, PR23A, bidir, X, 75, 1, Z), " &
+		"75 (BC_2, *, control, 1), " &
+		"74 (BC_7, PR23B, bidir, X, 73, 1, Z), " &
+		"73 (BC_2, *, control, 1), " &
+		"72 (BC_7, PR23C, bidir, X, 71, 1, Z), " &
+		"71 (BC_2, *, control, 1), " &
+		"70 (BC_7, PR23D, bidir, X, 69, 1, Z), " &
+		"69 (BC_2, *, control, 1), " &
+		"68 (BC_7, PR26A, bidir, X, 67, 1, Z), " &
+		"67 (BC_2, *, control, 1), " &
+		"66 (BC_7, PR26B, bidir, X, 65, 1, Z), " &
+		"65 (BC_2, *, control, 1), " &
+		"64 (BC_7, PR26C, bidir, X, 63, 1, Z), " &
+		"63 (BC_2, *, control, 1), " &
+		"62 (BC_7, PR26D, bidir, X, 61, 1, Z), " &
+		"61 (BC_2, *, control, 1), " &
+		"60 (BC_7, PR29A, bidir, X, 59, 1, Z), " &
+		"59 (BC_2, *, control, 1), " &
+		"58 (BC_7, PR29B, bidir, X, 57, 1, Z), " &
+		"57 (BC_2, *, control, 1), " &
+		"56 (BC_7, PR29C, bidir, X, 55, 1, Z), " &
+		"55 (BC_2, *, control, 1), " &
+		"54 (BC_7, PR29D, bidir, X, 53, 1, Z), " &
+		"53 (BC_2, *, control, 1), " &
+		"52 (BC_7, PR32A, bidir, X, 51, 1, Z), " &
+		"51 (BC_2, *, control, 1), " &
+		"50 (BC_7, PR32B, bidir, X, 49, 1, Z), " &
+		"49 (BC_2, *, control, 1), " &
+		"48 (BC_7, PR32C, bidir, X, 47, 1, Z), " &
+		"47 (BC_2, *, control, 1), " &
+		"46 (BC_7, PR32D, bidir, X, 45, 1, Z), " &
+		"45 (BC_2, *, control, 1), " &
+		"44 (BC_7, PR35A, bidir, X, 43, 1, Z), " &
+		"43 (BC_2, *, control, 1), " &
+		"42 (BC_7, PR35B, bidir, X, 41, 1, Z), " &
+		"41 (BC_2, *, control, 1), " &
+		"40 (BC_7, PR35C, bidir, X, 39, 1, Z), " &
+		"39 (BC_2, *, control, 1), " &
+		"38 (BC_7, PR35D, bidir, X, 37, 1, Z), " &
+		"37 (BC_2, *, control, 1), " &
+		"36 (BC_7, PR38A, bidir, X, 35, 1, Z), " &
+		"35 (BC_2, *, control, 1), " &
+		"34 (BC_7, PR38B, bidir, X, 33, 1, Z), " &
+		"33 (BC_2, *, control, 1), " &
+		"32 (BC_7, PR38C, bidir, X, 31, 1, Z), " &
+		"31 (BC_2, *, control, 1), " &
+		"30 (BC_7, PR38D, bidir, X, 29, 1, Z), " &
+		"29 (BC_2, *, control, 1), " &
+		"28 (BC_7, PR41A, bidir, X, 27, 1, Z), " &
+		"27 (BC_2, *, control, 1), " &
+		"26 (BC_7, PR41B, bidir, X, 25, 1, Z), " &
+		"25 (BC_2, *, control, 1), " &
+		"24 (BC_7, PR41C, bidir, X, 23, 1, Z), " &
+		"23 (BC_2, *, control, 1), " &
+		"22 (BC_7, PR41D, bidir, X, 21, 1, Z), " &
+		"21 (BC_2, *, control, 1), " &
+		"20 (BC_7, PR44A, bidir, X, 19, 1, Z), " &
+		"19 (BC_2, *, control, 1), " &
+		"18 (BC_7, PR44B, bidir, X, 17, 1, Z), " &
+		"17 (BC_2, *, control, 1), " &
+		"16 (BC_7, PR44C, bidir, X, 15, 1, Z), " &
+		"15 (BC_2, *, control, 1), " &
+		"14 (BC_7, PR44D, bidir, X, 13, 1, Z), " &
+		"13 (BC_2, *, control, 1), " &
+		"12 (BC_7, PR47A, bidir, X, 11, 1, Z), " &
+		"11 (BC_2, *, control, 1), " &
+		"10 (BC_7, PR47B, bidir, X, 9, 1, Z), " &
+		"9 (BC_2, *, control, 1), " &
+		"8 (BC_7, PR47C, bidir, X, 7, 1, Z), " &
+		"7 (BC_2, *, control, 1), " &
+		"6 (BC_7, PR47D, bidir, X, 5, 1, Z), " &
+		"5 (BC_2, *, control, 1), " &
+		"4 (BC_1, *, internal, X), " &
+		"3 (BC_1, *, internal, X), " &
+		"2 (BC_1, *, internal, X), " &
+		"1 (BC_1, *, internal, X), " &
+		"0 (BC_1, *, internal, X)";
+
+end LFE5U_25F_XXBG256;
