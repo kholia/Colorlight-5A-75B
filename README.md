@@ -5,12 +5,16 @@
 ```
 |-------|------|
 | J30   | TDO  |
-| ...   | TDI  |
-| ...   | TMS  |
+| J29   | TDI  |
+| J28   | TMS  |
 | J27   | TCK  |
+|-------|------|
 ```
 
 ![FPGA pinout](./colorlight_jtag_uart-1024x675.jpeg)
+
+ATTENTION: For exact pinout (which varies depending on the board revision),
+please see https://github.com/q3k/chubby75/tree/master/5a-75b.
 
 Image Credit: [Anton Blanchard](https://twitter.com/antonblanchard/status/1231778939888029696).
 
@@ -18,6 +22,12 @@ Image Credit: [Anton Blanchard](https://twitter.com/antonblanchard/status/123177
 
 ```
 sudo openocd -s /usr/local/share/openocd -f buspirate-flash.cfg
+```
+
+#### Programming Colorlight-5A-75B using CMSIS-DAP with OpenOCD:
+
+```
+sudo openocd -s /usr/local/share/openocd -f cmsisdap-flash.cfg
 ```
 
 #### Programming Colorlight-5A-75B using STM32 + DirtyJTAG with UrJTAG:
