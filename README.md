@@ -30,6 +30,62 @@ sudo openocd -s /usr/local/share/openocd -f buspirate-flash.cfg
 sudo openocd -s /usr/local/share/openocd -f cmsisdap-flash.cfg
 ```
 
+#### Programming Colorlight-5A-75B using pico-dirtyJtag (preferred):
+
+Flash https://github.com/phdussud/pico-dirtyJtag to the Raspberry Pi Pico board.
+
+| Pico   | JTAG |
+|--------|------|
+| GPIO16 | TDI  |
+| GPIO17 | TDO  |
+| GPIO18 | TCK  |
+| GPIO19 | TMS  |
+
+```
+sudo openFPGALoader --cable dirtyJtag --detect
+
+sudo openFPGALoader --cable dirtyJtag -v blink.bit
+```
+
+Log:
+
+```
+$ sudo openFPGALoader --cable dirtyJtag -v blink.bit
+empty
+Jtag frequency : requested 6000000Hz -> real 6000000Hz
+found 1 devices
+index 0:
+	idcode 0x41111043
+	manufacturer lattice
+	family ECP5
+	model  LFE5U-25
+	irlength 8
+File type : bit
+Open file: DONE
+b3bdffff
+Parse file: DONE
+bitstream header infos
+Part: LFE5U-25F-6CABGA256
+idcode: 41111043
+IDCode : 41111043
+displayReadReg
+	Config Target Selection : 0
+	Done Flag
+	BSE Error Code
+		No err
+Enable configuration: DONE
+SRAM erase: DONE
+Loading: [==================================================] 100.00%
+Done
+userCode: 00000000
+Disable configuration: DONE
+displayReadReg
+	Config Target Selection : 0
+	Done Flag
+	BSE Error Code
+		No err
+```
+
 #### Programming Colorlight-5A-75B using STM32 + DirtyJTAG with UrJTAG:
 
 Programming Colorlight 5A-75B (15$ ECP5 FPGA board) with 2$ STM32 "Blue Pill"
@@ -97,7 +153,7 @@ This works but I have no idea what many of these things are. Time to learn... ;)
 
 - https://github.com/zoobab/versaloon
 
-- https://github.com/q3k/chubby75/tree/master/5a-75b
+- https://github.com/q3k/chubby75/tree/master/5a-75b (see this for exact pinout)
 
 - https://github.com/Martoni/blp/tree/master/platforms/colorlight
 

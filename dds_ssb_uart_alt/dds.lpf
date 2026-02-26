@@ -1,0 +1,26 @@
+LOCATE COMP "clk_i" SITE "P6";
+IOBUF PORT "clk_i" IO_TYPE=LVCMOS33;
+FREQUENCY PORT "clk_i" 25 MHZ;
+
+# Define internal 100MHz clock frequency
+FREQUENCY NET "clk_100" 100.0 MHZ;
+
+# Colorlight 5A-75B v8.2 board LED (Active Low)
+LOCATE COMP "led_o" SITE "T6";
+IOBUF PORT "led_o" IO_TYPE=LVCMOS33;
+
+# HUB75 Output Enable (M4) - Drive LOW to enable 74HC245 buffers
+LOCATE COMP "hub75_oe" SITE "M4";
+IOBUF PORT "hub75_oe" IO_TYPE=LVCMOS33;
+
+# Output pin on HUB75 J5 Connector Pin 1
+LOCATE COMP "rf_out" SITE "T13";
+IOBUF PORT "rf_out" IO_TYPE=LVCMOS33;
+
+# UART RX pin (J19 header)
+LOCATE COMP "uart_rx_i" SITE "R7";
+IOBUF PORT "uart_rx_i" IO_TYPE=LVCMOS33;
+
+# UART TX pin (J4 header)
+LOCATE COMP "uart_tx_o" SITE "P5";
+IOBUF PORT "uart_tx_o" IO_TYPE=LVCMOS33;

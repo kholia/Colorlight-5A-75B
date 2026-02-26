@@ -1,0 +1,11 @@
+LOCATE COMP "clk_i" SITE "P6";
+IOBUF PORT "clk_i" IO_TYPE=LVCMOS33;
+FREQUENCY PORT "clk_i" 25 MHZ;
+
+# Colorlight 5A-75B v8.2 board LED
+LOCATE COMP "led_o" SITE "T6";
+IOBUF PORT "led_o" IO_TYPE=LVCMOS33;
+
+# Output pin on HUB75 connector (T13 is Pin 1 of J7 connector)
+LOCATE COMP "rf_out" SITE "T13";
+IOBUF PORT "rf_out" IO_TYPE=LVCMOS33;
